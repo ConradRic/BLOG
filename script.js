@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             dados.forEach(feriado => {
                  const f = document.createElement("p")
-                 f.innerText = formatarData(feriado.date) + " " + feriado.name
+                 f.innerText = formatarData(feriado.date) + " ➡️ " + feriado.name
                  lista.append (f)
                 
             });
