@@ -16,10 +16,11 @@ body {
 .container {
     max-width: 600px;
     margin: 0 auto;
-background: bisque;
+    background: bisque;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 #Lista p {
@@ -30,5 +31,25 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
+}
+
+.Line {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dashed goldenrod;
+    transition: border-color 0.2s;
+
+    display: flex;
+    gap: 1rem;
+
+    &:focus {
+        outline: none;
+        border-color: goldenrod ;
+    }
+}
+
+.verificado {
+    accent-color: green;
 }
 

@@ -13,17 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const dados = await resposta.json();
-            
-            if (dados.length === 0) {
-                mostrarResultado('Nenhum feriado encontrado com esse nome', true);
-                return;
-            }
 
             console.log (dados);
 
             dados.forEach(feriado => {
-                 const f = document.createElement("p")
-                 f.innerText = formatarData(feriado.date) + " ➡️ " + feriado.name
+                 const f = document.createElement("div")
+                 f.innerHTML = `<input class= "verificado" type="checkbox"><p>${formatarData(feriado.date) + " ➡️ " + feriado.name}</p>` 
+                 f.classList.add("Line")
                  lista.append (f)
                 
             });
